@@ -1,3 +1,4 @@
+// Used to get Text Element value
 function getTextValue(elementID) {
     const element = document.getElementById(elementID);
     const valueString = element.innerText;
@@ -5,6 +6,7 @@ function getTextValue(elementID) {
     return valueNum;
 }
 
+// Used to get User Input value
 function getInputValue(inputID) {
     const element = document.getElementById(inputID);
     const valueString = element.value;
@@ -24,11 +26,12 @@ function getInputValue(inputID) {
 }
 
 
-
+// Used to set Value in text element
 function setTextValue(elementID, value) {
     const element = document.getElementById(elementID);
     element.innerText = value;
 }
+
 
 // Random Color creating function
 function getRandomColor() {
@@ -41,34 +44,17 @@ function getRandomColor() {
 }
 
 
+// Calculation function along with putting values in result table and in formula
 function calculateEvent(item, data1ID, data2ID, prefValue, equationID, formula) {
     const data1 = getInputValue(data1ID);
     const data2 = getInputValue(data2ID);
-    let i = 1;
     if (data1 === false || data2 === false) {
         return;
     }
     else {
-        
-
-        // let htmlNode = document.getElementById('calc-table-body');
-        // let elementNode = htmlNode.childNodes(        
-        // `
-
-        // <tr>
-        //    <td>1. `+ item + `</td>
-        //    <td><span id="` + item +`-area">12</span>cm<sup>2</sup> </td>
-        //   <td><button class="btn-primary btn-calculation">Convert to m<sup>2</sup> </button></td>
-        // </tr>
-        // `)
-        
-
-
         const equationValues = data1 + " × " + data2;
         const prefixValue = prefValue;
-        const triangleArea = prefixValue * data1 * data2;
-        console.log(triangleArea);
-        console.log(equationValues);
+        const Area = prefixValue * data1 * data2;
         
         
         // Result table
@@ -77,14 +63,11 @@ function calculateEvent(item, data1ID, data2ID, prefValue, equationID, formula) 
         let c1 = row.insertCell(0);
         let c2 = row.insertCell(1);
         let c3 = row.insertCell(2);
-        let formulaElement = document.getElementById(formula)
  
         c1.innerHTML = row.rowIndex + '. ' + item;
-        c2.innerHTML =  triangleArea + `cm<sup>2</sup>`;
-        c3.innerHTML = '<button class="btn-primary btn-calculation">Convert to m<sup>2</sup> </button>';
+        c2.innerHTML =  Area + `<span>cm<sup>2</sup></span>`;
+        c3.innerHTML = '<button class="btn-primary btn-calculation" >Convert to m<sup>2</sup> </button>';
 
         setTextValue(equationID, equationValues);
-        i++;
-        // setTextValue(resultAreID, triangleArea);
     }
 }

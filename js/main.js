@@ -53,4 +53,3 @@ document.getElementById('ellipse-calculation').addEventListener('click', functio
 });
 
 
-
