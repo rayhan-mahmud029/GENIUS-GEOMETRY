@@ -36,7 +36,7 @@
             <div class="top">
                 <img src="./images/triangle.png" alt="">
                 <h1 class="card-title">Triangle</h1>
-                <p class="card-description">Area (A) = 0.5  × <span id="triangle-values"> b × h</span> <i class="fa-solid fa-pen-to-square"></i></p>
+                <p class="card-description" id="formula">Area (A) = 0.5  × <span id="triangle-values"> b × h</span> <i class="fa-solid fa-pen-to-square"></i></p>
 
                 <div class="input-area">
                     <label for=""><input type="number" min="0" placeholder="b" id="triangle-base">cm</input></label>
@@ -53,7 +53,7 @@
             <div class="top">
                 <img src="./images/rectangle.png" alt="">
                 <h1 class="card-title">Rectangle</h1>
-                <p class="card-description">Area (A) = <span id="rectangle-vlaues"> w × l </span><i class="fa-solid fa-pen-to-square"></i></p>
+                <p class="card-description">Area (A) = <span id="rectangle-vlaues"> w × l </span> <i class="fa-solid fa-pen-to-square"></i></p>
 
                 <div class="input-area">
                     <label for=""><input type="number" min="0" placeholder="w" id="rectangle-width">cm</input></label>
@@ -70,7 +70,7 @@
             <div class="top">
                 <img src="./images/parallelogram.png" alt="">
                 <h1 class="card-title">Parallelogram</h1>
-                <p class="card-description">Area (A) = <span id="parallelogram-values"> b × h </span><i class="fa-solid fa-pen-to-square"></i></p>
+                <p class="card-description">Area (A) = <span id="parallelogram-values"> b × h </span> <i class="fa-solid fa-pen-to-square"></i></p>
 
                 <div class="input-area">
                     <label for=""><input type="number" min="0" placeholder="b" id="parallelogram-base">cm</input></label>
@@ -104,7 +104,7 @@
             <div class="top">
                 <img src="./images/pentagon.png" alt="">
                 <h1 class="card-title">Pentagon</h1>
-                <p class="card-description">Area (A) = 0.5  × <span id="pentagon-vlaues">p × b</span><i class="fa-solid fa-pen-to-square"></i></p>
+                <p class="card-description">Area (A) = 0.5  × <span id="pentagon-vlaues">p × b</span> <i class="fa-solid fa-pen-to-square"></i></p>
 
                 <div class="input-area">
                     <label for=""><input type="number" min="0" placeholder="p" id="pentagon-p">cm</input></label>
@@ -141,7 +141,7 @@
          <h1 class="calculation-title">Area Calculation</h1>
 
          <!-- Calculation Table -->
-         <div class="calc-table">
+         <div class="calc-table" style="overflow-x:auto;">
          <table id="calc-table">
             <thead>
                 <tr class="head-row">

@@ -8,12 +8,17 @@ function getTextValue(elementID) {
 function getInputValue(inputID) {
     const element = document.getElementById(inputID);
     const valueString = element.value;
-    if (valueString === '') {
+    const valueNum = parseInt(valueString);
+    if (valueString === '' || isNaN(valueNum) === true) {
         alert('Enter number in input field');
         return false;
     }
+
+    else if(valueNum <0 ){
+        alert('Enter positive number');
+        return false;
+    }
     else {
-        const valueNum = parseInt(valueString);
         return valueNum;
     }
 }
@@ -36,7 +41,7 @@ function getRandomColor() {
 }
 
 
-function calculateEvent(item, data1ID, data2ID, prefValue, equationID) {
+function calculateEvent(item, data1ID, data2ID, prefValue, equationID, formula) {
     const data1 = getInputValue(data1ID);
     const data2 = getInputValue(data2ID);
     let i = 1;
@@ -72,7 +77,8 @@ function calculateEvent(item, data1ID, data2ID, prefValue, equationID) {
         let c1 = row.insertCell(0);
         let c2 = row.insertCell(1);
         let c3 = row.insertCell(2);
-
+        let formulaElement = document.getElementById(formula)
+ 
         c1.innerHTML = row.rowIndex + '. ' + item;
         c2.innerHTML =  triangleArea + `cm<sup>2</sup>`;
         c3.innerHTML = '<button class="btn-primary btn-calculation">Convert to m<sup>2</sup> </button>';

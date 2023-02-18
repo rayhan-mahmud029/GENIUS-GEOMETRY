@@ -63,6 +63,7 @@ header {
     border-radius: 8px;
     border: 1px solid rgba(17, 17, 17, 0.1);
     margin: 1rem 0;
+    position: relative;
 }
 
 .calculation-title {
@@ -170,34 +171,29 @@ label {
 
 }
 
-.calc-table {
-    overflow: auto;
-}
 
 table {
     width: 100%;
     margin: 1rem 0.5rem;
     font-size: 14px;
+
 }
-
-
-thead{
-    background-color: rgba(16, 144, 216, 0.1);
-    border-radius: 15px 15px 0 0;
+.calc-table{
+    width: 100%;
 }
 
 
 th {
     color: rgba(17, 17, 17, 0.6);
-    padding: 5px;
+    padding: 10px;
 }
 
-table,
-tr,
-td {
-    padding: 8px;
+table, th, td {
+    padding: 10px;
     border-bottom: 1px solid lightgray;
     border-collapse: collapse;
+    border-spacing: 0;
+    background-color: rgba(16, 144, 216, 0.1);
 }
 
 .btn-calculation {
