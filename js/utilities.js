@@ -2,7 +2,7 @@
 function getTextValue(elementID) {
     const element = document.getElementById(elementID);
     const valueString = element.innerText;
-    const valueNum = parseInt(valueString);
+    let valueNum = parseFloat(valueString).toFixed(2);
     return valueNum;
 }
 
@@ -10,7 +10,7 @@ function getTextValue(elementID) {
 function getInputValue(inputID) {
     const element = document.getElementById(inputID);
     const valueString = element.value;
-    const valueNum = parseInt(valueString);
+    let valueNum = parseFloat(valueString).toFixed(2);
     if (valueString === '' || isNaN(valueNum) === true) {
         alert('Enter number in input field');
         return false;
@@ -54,7 +54,8 @@ function calculateEvent(item, data1ID, data2ID, prefValue, equationID, formula) 
     else {
         const equationValues = data1 + " × " + data2;
         const prefixValue = prefValue;
-        const Area = prefixValue * data1 * data2;
+        const Area = parseFloat(prefixValue * data1 * data2).toFixed(2);
+
         
         
         // Result table
