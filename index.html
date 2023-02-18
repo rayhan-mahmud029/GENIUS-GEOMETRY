@@ -9,6 +9,9 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/4e68e5eaaf.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -19,28 +22,29 @@
             <h5 class="subtitle">Geometry Genius</h5>
         </div>
         <div class="right-nav">
-            <button class="btn-primary">Blog</button>
+            <button class="btn-primary" id="blog-btn">Blog</button>
         </div>
     </header>
 
     <!-- Main Contents -->
-    <main class="container">
+    <main class="container" id="all-cards">
         <!-- Cards-->
-
+         
+        <section class="cards-container">
         <!-- Triangle -->
-        <div class="card">
+        <div class="card" id="triangle">
             <div class="top">
                 <img src="./images/triangle.png" alt="">
                 <h1 class="card-title">Triangle</h1>
-                <p class="card-description">Area (A) = b × h</p>
+                <p class="card-description">Area (A) = 0.5  × <span id="triangle-values"> b × h</span> <i class="fa-solid fa-pen-to-square"></i></p>
 
                 <div class="input-area">
-                    <label for=""><input type="text">cm</input></label><label for=""><input
-                            type="text">cm</input></label>
+                    <label for=""><input type="number" min="0" placeholder="b" id="triangle-base">cm</input></label>
+                    <label for=""><input type="number" min="0" placeholder="h" id="triangle-height">cm</input></label>
                 </div>
             </div>
 
-            <div class="card-bottom"><button class="btn-primary btn-card">Calculate</button>
+            <div class="card-bottom"><button class="btn-primary btn-card" id="triangle-calculation">Calculate</button>
             </div>
         </div>
 
@@ -48,16 +52,16 @@
         <div class="card">
             <div class="top">
                 <img src="./images/rectangle.png" alt="">
-                <h1 class="card-title">Triangle</h1>
-                <p class="card-description">Area (A) = b × h</p>
+                <h1 class="card-title">Rectangle</h1>
+                <p class="card-description">Area (A) = <span id="rectangle-vlaues"> w × l </span><i class="fa-solid fa-pen-to-square"></i></p>
 
                 <div class="input-area">
-                    <label for=""><input type="text">cm</input></label><label for=""><input
-                            type="text">cm</input></label>
+                    <label for=""><input type="number" min="0" placeholder="w" id="rectangle-width">cm</input></label>
+                    <label for=""><input type="number" min="0" placeholder="l" id="rectangle-length">cm</input></label>
                 </div>
             </div>
 
-            <div class="card-bottom"><button class="btn-primary btn-card">Calculate</button>
+            <div class="card-bottom" id="rectangle-calculation"><button class="btn-primary btn-card">Calculate</button>
             </div>
         </div>
 
@@ -65,16 +69,16 @@
         <div class="card">
             <div class="top">
                 <img src="./images/parallelogram.png" alt="">
-                <h1 class="card-title">Triangle</h1>
-                <p class="card-description">Area (A) = b × h</p>
+                <h1 class="card-title">Parallelogram</h1>
+                <p class="card-description">Area (A) = <span id="parallelogram-values"> b × h </span><i class="fa-solid fa-pen-to-square"></i></p>
 
                 <div class="input-area">
-                    <label for=""><input type="text">cm</input></label><label for=""><input
-                            type="text">cm</input></label>
+                    <label for=""><input type="number" min="0" placeholder="b" id="parallelogram-base">cm</input></label>
+                    <label for=""><input type="number" min="0" placeholder="h" id="parallelogram-height">cm</input></label>
                 </div>
             </div>
 
-            <div class="card-bottom"><button class="btn-primary btn-card">Calculate</button>
+            <div class="card-bottom" id="parallelogram-calculation"><button class="btn-primary btn-card">Calculate</button>
             </div>
         </div>
 
@@ -82,16 +86,16 @@
         <div class="card">
             <div class="top">
                 <img src="./images/rhombus.png" alt="">
-                <h1 class="card-title">Triangle</h1>
-                <p class="card-description">Area (A) = b × h</p>
+                <h1 class="card-title">Rhombus</h1>
+                <p class="card-description">Area (A) = 0.5 × <span id="rhombus-values"> d<sub>1</sub> × d<sub>2</sub></span> <i class="fa-solid fa-pen-to-square"></i></p>
 
                 <div class="input-area">
-                    <label for=""><input type="text">cm</input></label><label for=""><input
-                            type="text">cm</input></label>
+                    <label for=""><input type="number" min="0" placeholder="d1" id="rhombus-d1">cm</input></label>
+                    <label for=""><input type="number" min="0" placeholder="d2" id="rhombus-d2">cm</input></label>
                 </div>
             </div>
 
-            <div class="card-bottom"><button class="btn-primary btn-card">Calculate</button>
+            <div class="card-bottom" id="rhombus-calculation"><button class="btn-primary btn-card">Calculate</button>
             </div>
         </div>
 
@@ -99,16 +103,16 @@
         <div class="card">
             <div class="top">
                 <img src="./images/pentagon.png" alt="">
-                <h1 class="card-title">Triangle</h1>
-                <p class="card-description">Area (A) = b × h</p>
+                <h1 class="card-title">Pentagon</h1>
+                <p class="card-description">Area (A) = 0.5  × <span id="pentagon-vlaues">p × b</span><i class="fa-solid fa-pen-to-square"></i></p>
 
                 <div class="input-area">
-                    <label for=""><input type="text">cm</input></label><label for=""><input
-                            type="text">cm</input></label>
+                    <label for=""><input type="number" min="0" placeholder="p" id="pentagon-p">cm</input></label>
+                    <label for=""><input type="number" min="0" placeholder="b" id="pentagon-b">cm</input></label>
                 </div>
             </div>
 
-            <div class="card-bottom"><button class="btn-primary btn-card">Calculate</button>
+            <div class="card-bottom" id="pentagon-calculation"><button class="btn-primary btn-card">Calculate</button>
             </div>
         </div>
 
@@ -116,21 +120,49 @@
         <div class="card">
             <div class="top">
                 <img src="./images/ellipse.png" alt="">
-                <h1 class="card-title">Triangle</h1>
-                <p class="card-description">Area (A) = b × h</p>
+                <h1 class="card-title">Ellipse</h1>
+                <p class="card-description">Area (A) = π × <span id="ellipse-values">ab</span> <i class="fa-solid fa-pen-to-square"></i></p>
 
 
                 <div class="input-area">
-                    <label for=""><input type="text">cm</input></label><label for=""><input
-                            type="text">cm</input></label>
+                    <label for=""><input type="number" min="0" id="ellipse-a-axis">cm</input></label>
+                    <label for=""><input type="number" min="0" id="ellipse-b-axis">cm</input></label>
                 </div>
             </div>
 
-            <div class="card-bottom"><button class="btn-primary btn-card">Calculate</button>
+            <div class="card-bottom" id="ellipse-calculation"><button class="btn-primary btn-card">Calculate</button>
             </div>
         </div>
+      </section>
+
+
+      <!-- Result Table -->
+      <section class="result-container">
+         <h1 class="calculation-title">Area Calculation</h1>
+
+         <!-- Calculation Table -->
+         <div class="calc-table">
+         <table id="calc-table">
+            <thead>
+                <tr class="head-row">
+                    <th>Name</th>
+                    <th>Area</th>
+                    <th>Converter</th>
+                </tr>
+            </thead>
+            <tbody id="calc-table-body">
+     
+            </tbody>
+        </table>
+        </div>
+      </section>
 
     </main>
+
+
+    <!-- Java Scripts -->
+    <script src="./js/utilities.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
